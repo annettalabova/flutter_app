@@ -29,7 +29,6 @@ class _BottomNavBar extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('My tickets')),
       body: appScreens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
@@ -41,25 +40,39 @@ class _BottomNavBar extends State<BottomNavBar> {
           BottomNavigationBarItem(
             icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
 
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
+            activeIcon: Icon(
+              FluentSystemIcons.ic_fluent_home_filled,
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
+            icon: Icon(
+              FluentSystemIcons.ic_fluent_search_regular,
+            ),
 
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled),
+            activeIcon: Icon(
+              FluentSystemIcons.ic_fluent_search_filled,
+            ),
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
+            icon: Icon(
+              FluentSystemIcons.ic_fluent_ticket_regular,
+            ),
 
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
+            activeIcon: Icon(
+              FluentSystemIcons.ic_fluent_ticket_filled,
+            ),
             label: 'Tickets',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
+            icon: Icon(
+              FluentSystemIcons.ic_fluent_person_regular,
+            ),
 
-            activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled),
+            activeIcon: Icon(
+              FluentSystemIcons.ic_fluent_person_filled,
+            ),
             label: 'Profile',
           ),
         ],
