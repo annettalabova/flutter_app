@@ -2,6 +2,8 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/base/res/media.dart';
 import 'package:flutter_app/base/res/styles/app_styles.dart';
+import 'package:flutter_app/base/widgets/app_double_text.dart';
+import 'package:flutter_app/base/widgets/ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -18,22 +20,14 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
-                      crossAxisAlignment:
-                          CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Good morning',
-                          style: AppStyles.headLineStyle3,
-                        ),
+                        Text('Good morning', style: AppStyles.headLineStyle3),
                         const SizedBox(height: 5),
-                        Text(
-                          'Book Tickets',
-                          style: AppStyles.headLineStyle1,
-                        ),
+                        Text('Book Tickets', style: AppStyles.headLineStyle1),
                       ],
                     ),
 
@@ -57,26 +51,27 @@ class HomeScreen extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(
-                      255,
-                      240,
-                      243,
-                      255,
-                    ),
+                    color: const Color(0xFFF4F6FD),
                   ),
                   child: const Row(
                     // mainAxisAlignment:
                     //     MainAxisAlignment.spaceBetween,
                     children: [
                       Icon(
-                        FluentSystemIcons
-                            .ic_fluent_search_regular,
+                        FluentSystemIcons.ic_fluent_search_regular,
                         color: Colors.blueGrey,
                       ),
                       Text('Search'),
                     ],
                   ),
                 ),
+                const SizedBox(height: 40),
+                const AppDoubleText(
+                  bigText: 'Upcoming Flights',
+                  smallText: 'View all',
+                ),
+                const SizedBox(height: 20),
+                const TicketView(),
               ],
             ),
           ),

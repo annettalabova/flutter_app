@@ -3,6 +3,8 @@ import 'package:flutter_app/base/bottom_nav_bar.dart';
 
 void main() {
   runApp(const MyApp());
+
+  
 }
 
 class MyApp extends StatelessWidget {
@@ -10,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: BottomNavBar(),
     );
